@@ -13,6 +13,25 @@ from PIL import Image
 import pytesseract
 import sys
 
+
+
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+import tempfile
+
+chrome_options = Options()
+chrome_options.add_argument("--headless=new")  # run in headless mode
+chrome_options.add_argument("--no-sandbox")
+chrome_options.add_argument("--disable-dev-shm-usage")
+
+# Use a temporary user-data-dir to avoid conflicts
+temp_dir = tempfile.mkdtemp()
+chrome_options.add_argument(f"--user-data-dir={temp_dir}")
+
+driver = webdriver.Chrome(options=chrome_options)
+
+
+
 # Force UTF-8 encoding for Windows console
 sys.stdout.reconfigure(encoding='utf-8')
 
