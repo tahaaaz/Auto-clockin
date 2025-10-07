@@ -2,8 +2,7 @@ name: Auto Clock-In
 
 on:
   schedule:
-    # Runs every minute
-    - cron: '*/1 * * * *'
+    # Runs every minut
   workflow_dispatch:
 
 jobs:
