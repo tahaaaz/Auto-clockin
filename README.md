@@ -1,1 +1,4 @@
-# Auto-clockin
+selenium
+pytesseract
+Pillow
+imaplib2
