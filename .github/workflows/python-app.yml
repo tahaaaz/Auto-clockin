@@ -26,5 +26,5 @@ jobs:
 
       - name: Run Keka Auto Attendance
         run: |
-          python your_script_name.py
+          python app.py
 
